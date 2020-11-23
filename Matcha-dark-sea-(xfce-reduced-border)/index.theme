@@ -1,11 +1,11 @@
 [Desktop Entry]
 Type=X-GNOME-Metatheme
-Name=Matcha-dark-sea
+Name=Matcha-dark-sea-(xfce-reduced-border)
 Comment=A dark modern design theme
 Encoding=UTF-8
 
 [X-GNOME-Metatheme]
-GtkTheme=Matcha-dark-sea
+GtkTheme=Matcha-dark-sea-(xfce-reduced-border)
 MetacityTheme=Matcha-dark-sea
 IconTheme=Qogir-manjaro
 CursorTheme=Qogir-manjaro
