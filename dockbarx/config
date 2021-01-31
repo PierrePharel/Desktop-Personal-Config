@@ -1,0 +1,478 @@
+<theme name = "Colors2">
+<!--
+	Created by nale12 (modified)
+-->
+<popup_style file_name="Colors2.tar.gz" />
+<colors>
+	<color1 default="#366F39" opacity="100" />
+	<color2 default="#e5e5e5" opacity="100" />
+	<color3 default="#003BFF" opacity="50" />
+	<color4 default="#a9a9a9" opacity="100" />
+	<color5 name="Not used" default="#000000" opacity="no" />
+</colors>
+
+<pixmaps>
+	<pixmap_from_file name="badge" file="badge.png" />
+	<pixmap_from_file name="mask2" file="mask2.png" />
+	<pixmap_from_file name="trans" file="trans.png" />
+	<pixmap_from_file name="active" file="active.png" />
+	<pixmap_from_file name="mask" file="mask.png" />
+</pixmaps>
+
+<button_pixmap gap = "0" aspect_ratio="1" windows_cnt="5">
+	<if size="41:">
+		<get_icon size="-12" />
+	</if>
+	<if size=":40">
+		<get_icon size="-7" />
+	</if>
+	<!-- rotate icons here and the whole button the other way in the end -->
+	<if orient="left">
+		<rotate angle="-90"/>
+	</if>
+	<if orient="right">
+		<rotate angle="90"/>
+	</if>
+	<!--<if orient="up">
+		<rotate angle="180"/>
+	</if>-->
+	<correct_size />
+	<!-- Moving the blink and needs attention up here so that the lowering effect is
+	     only affecting the icon and not the whole button. -->
+
+	<if type="blink">
+		<composite bg="trans" fg="self" yoffset="15"/>
+	</if>
+	<if type="needs_attention">
+		<composite bg="trans" fg="self" yoffset="15"/>
+	</if>
+		<if type="launcher">
+		<composite bg="trans" fg="self" yoffset="-2"/>
+	</if>
+
+	<if type="!launcher">
+	<if type="!mouse_over">
+	<if type="!launching">
+	<alpha_mask mask="mask2" />
+		<if windows="1">
+			<if type="!active">
+				<pixmap name="bg_color">
+					<fill color="icon_average" opacity="255" />
+					<alpha_mask mask="mask" />
+				</pixmap>
+				<composite bg="bg_color" fg="self" yoffset="-2"/>
+				<composite bg="self" fg="badge" />
+			</if>
+			<if type="active">
+				<pixmap name="bg_color">
+					<fill color="icon_average" opacity="100" />
+					<alpha_mask mask="mask" />
+				</pixmap>
+				<pixmap name="bg_col">
+					<fill color="icon_average" opacity="255" />
+					<alpha_mask mask="active" />
+				</pixmap>
+				<composite bg="bg_color" fg="self" yoffset="-2"/>
+				<composite bg="bg_col" fg="self" />
+				<composite bg="self" fg="badge" />
+			</if>
+		</if>
+		<if windows="2">
+			<if type="!active">
+				<pixmap name="bg_color">
+					<fill color="icon_average" opacity="255" />
+					<alpha_mask mask="mask" />
+				</pixmap>
+				<composite bg="bg_color" fg="self" yoffset="-2"/>
+				<composite bg="self" fg="badge" />
+			</if>
+			<if type="active">
+				<pixmap name="bg_color">
+					<fill color="icon_average" opacity="100" />
+					<alpha_mask mask="mask" />
+				</pixmap>
+				<pixmap name="bg_col">
+					<fill color="icon_average" opacity="255" />
+					<alpha_mask mask="active" />
+				</pixmap>
+				<composite bg="bg_color" fg="self" yoffset="-2"/>
+				<composite bg="bg_col" fg="self" />
+				<composite bg="self" fg="badge" />
+			</if>
+		</if>
+		<if windows="3">
+			<if type="!active">
+				<pixmap name="bg_color">
+					<fill color="icon_average" opacity="255" />
+					<alpha_mask mask="mask" />
+				</pixmap>
+				<composite bg="bg_color" fg="self" yoffset="-2"/>
+				<composite bg="self" fg="badge" />
+			</if>
+			<if type="active">
+				<pixmap name="bg_color">
+					<fill color="icon_average" opacity="100" />
+					<alpha_mask mask="mask" />
+				</pixmap>
+				<pixmap name="bg_col">
+					<fill color="icon_average" opacity="255" />
+					<alpha_mask mask="active" />
+				</pixmap>
+				<composite bg="bg_color" fg="self" yoffset="-2"/>
+				<composite bg="bg_col" fg="self" />
+				<composite bg="self" fg="badge" />
+			</if>
+		</if>
+		<if windows="4">
+			<if type="!active">
+				<pixmap name="bg_color">
+					<fill color="icon_average" opacity="255" />
+					<alpha_mask mask="mask" />
+				</pixmap>
+				<composite bg="bg_color" fg="self" yoffset="-2"/>
+				<composite bg="self" fg="badge" />
+			</if>
+			<if type="active">
+				<pixmap name="bg_color">
+					<fill color="icon_average" opacity="100" />
+					<alpha_mask mask="mask" />
+				</pixmap>
+				<pixmap name="bg_col">
+					<fill color="icon_average" opacity="255" />
+					<alpha_mask mask="active" />
+				</pixmap>
+				<composite bg="bg_color" fg="self" yoffset="-2"/>
+				<composite bg="bg_col" fg="self" />
+				<composite bg="self" fg="badge" />
+			</if>
+		</if>
+		<if windows="5">
+			<if type="!active">
+				<pixmap name="bg_color">
+					<fill color="icon_average" opacity="255" />
+					<alpha_mask mask="mask" />
+				</pixmap>
+				<composite bg="bg_color" fg="self" yoffset="-2"/>
+				<composite bg="self" fg="badge" />
+			</if>
+			<if type="active">
+				<pixmap name="bg_color">
+					<fill color="icon_average" opacity="100" />
+					<alpha_mask mask="mask" />
+				</pixmap>
+				<pixmap name="bg_col">
+					<fill color="icon_average" opacity="255" />
+					<alpha_mask mask="active" />
+				</pixmap>
+				<composite bg="bg_color" fg="self" yoffset="-2"/>
+				<composite bg="bg_col" fg="self" />
+				<composite bg="self" fg="badge" />
+			</if>
+		</if>
+	</if>
+	</if>
+	</if>
+	<if type="mouse_over">
+		<if type="launching">
+			<pixmap name="bg_color">
+				<fill color="icon_average" opacity="100" />
+				<alpha_mask mask="active" />
+			</pixmap>
+			<composite bg="bg_color" fg="self" />
+		</if>
+		<!-- making an empty pixmap (no need to add a completely transparent picture to the file for that) -->
+		<pixmap name="empty" />
+
+		<!-- It's probably not necessary to use a pixmap here but I wanted to show how simple they are to use since you use none of them in this theme. -->
+		<if type="!launcher">
+		<if type="!launching">
+			<if windows="1">
+				<if type="!active">
+				<pixmap name="bg_col">
+					<fill color="icon_average" opacity="100" />
+					<alpha_mask mask="mask" />
+				</pixmap>
+				<pixmap name="bg_color">
+					<fill color="icon_average" opacity="100" />
+					<alpha_mask mask="active" />
+				</pixmap>
+				<composite bg="bg_col" fg="self"  yoffset="-2"/>
+				<composite bg="bg_color" fg="self" />
+				<composite bg="self" fg="badge" />
+			</if>
+			<if type="active">
+				<pixmap name="bg_col">
+					<fill color="icon_average" opacity="100" />
+					<alpha_mask mask="mask" />
+				</pixmap>
+				<pixmap name="bg_color">
+					<fill color="icon_average" opacity="100" />
+					<alpha_mask mask="active" />
+				</pixmap>
+				<composite bg="bg_col" fg="self" yoffset="-2"/>
+				<composite bg="bg_color" fg="self" />
+				<composite bg="self" fg="badge" />
+				</if>
+			</if>
+			<if windows="2">
+				<if type="!active">
+				<pixmap name="bg_col">
+					<fill color="icon_average" opacity="100" />
+					<alpha_mask mask="mask" />
+				</pixmap>
+				<pixmap name="bg_color">
+					<fill color="icon_average" opacity="100" />
+					<alpha_mask mask="active" />
+				</pixmap>
+				<composite bg="bg_col" fg="self" yoffset="-2"/>
+				<composite bg="bg_color" fg="self" />
+				<composite bg="self" fg="badge" />
+			</if>
+			<if type="active">
+				<pixmap name="bg_col">
+					<fill color="icon_average" opacity="100" />
+					<alpha_mask mask="mask" />
+				</pixmap>
+				<pixmap name="bg_color">
+					<fill color="icon_average" opacity="100" />
+					<alpha_mask mask="active" />
+				</pixmap>
+				<composite bg="bg_col" fg="self" yoffset="-2"/>
+				<composite bg="bg_color" fg="self" />
+				<composite bg="self" fg="badge" />
+				</if>
+			</if>
+			<if windows="3">
+				<if type="!active">
+				<pixmap name="bg_col">
+					<fill color="icon_average" opacity="100" />
+					<alpha_mask mask="mask" />
+				</pixmap>
+				<pixmap name="bg_color">
+					<fill color="icon_average" opacity="100" />
+					<alpha_mask mask="active" />
+				</pixmap>
+				<composite bg="bg_col" fg="self" yoffset="-2"/>
+				<composite bg="bg_color" fg="self" />
+				<composite bg="self" fg="badge" />
+			</if>
+			<if type="active">
+				<pixmap name="bg_col">
+					<fill color="icon_average" opacity="100" />
+					<alpha_mask mask="mask" />
+				</pixmap>
+				<pixmap name="bg_color">
+					<fill color="icon_average" opacity="100" />
+					<alpha_mask mask="active" />
+				</pixmap>
+				<composite bg="bg_col" fg="self" yoffset="-2"/>
+				<composite bg="bg_color" fg="self" />
+				<composite bg="self" fg="badge" />
+				</if>
+			</if>
+			<if windows="4">
+				<if type="!active">
+				<pixmap name="bg_col">
+					<fill color="icon_average" opacity="100" />
+					<alpha_mask mask="mask" />
+				</pixmap>
+				<pixmap name="bg_color">
+					<fill color="icon_average" opacity="100" />
+					<alpha_mask mask="active" />
+				</pixmap>
+				<composite bg="bg_col" fg="self" yoffset="-2"/>
+				<composite bg="bg_color" fg="self" />
+				<composite bg="self" fg="badge" />
+			</if>
+			<if type="active">
+				<pixmap name="bg_col">
+					<fill color="icon_average" opacity="100" />
+					<alpha_mask mask="mask" />
+				</pixmap>
+				<pixmap name="bg_color">
+					<fill color="icon_average" opacity="100" />
+					<alpha_mask mask="active" />
+				</pixmap>
+				<composite bg="bg_col" fg="self" yoffset="-2"/>
+				<composite bg="bg_color" fg="self" />
+				<composite bg="self" fg="badge" />
+				</if>
+			</if>
+			<if windows="5">
+				<if type="!active">
+				<pixmap name="bg_col">
+					<fill color="icon_average" opacity="100" />
+					<alpha_mask mask="mask" />
+				</pixmap>
+				<pixmap name="bg_color">
+					<fill color="icon_average" opacity="100" />
+					<alpha_mask mask="active" />
+				</pixmap>
+				<composite bg="bg_col" fg="self" yoffset="-2"/>
+				<composite bg="bg_color" fg="self" />
+				<composite bg="self" fg="badge" />
+			</if>
+			<if type="active">
+				<pixmap name="bg_col">
+					<fill color="icon_average" opacity="100" />
+					<alpha_mask mask="mask" />
+				</pixmap>
+				<pixmap name="bg_color">
+					<fill color="icon_average" opacity="100" />
+					<alpha_mask mask="active" />
+				</pixmap>
+				<composite bg="bg_col" fg="self" yoffset="-2"/>
+				<composite bg="bg_color" fg="self" />
+				<composite bg="self" fg="badge" />
+				</if>
+			</if>
+		</if>
+		</if>
+	</if>
+	<if type="launching">
+		<if windows="0">
+			<pixmap name="bg_col">
+				<fill color="#282A33" opacity="100" />
+				<alpha_mask mask="active" />
+			</pixmap>
+			<composite bg="bg_col" fg="self"/>
+		</if>
+		<if windows="1">
+			<pixmap name="bg_col">
+				<fill color="#282A33" opacity="100" />
+				<alpha_mask mask="active" />
+			</pixmap>
+			<if type="!active">
+				<pixmap name="bg_color">
+					<fill color="icon_average" opacity="100" />
+					<alpha_mask mask="mask" />
+				</pixmap>
+				<composite bg="bg_col" fg="self" yoffset="-2"/>
+				<composite bg="bg_color" fg="self" />
+				<composite bg="self" fg="badge" />
+			</if>
+			<if type="active">
+				<pixmap name="bg_color">
+					<fill color="icon_average" opacity="100" />
+					<alpha_mask mask="mask" />
+				</pixmap>
+				<composite bg="bg_color" fg="self" yoffset="-2"/>
+				<composite bg="bg_col" fg="self" />
+				<composite bg="active" fg="self" />
+				<composite bg="self" fg="badge" />
+			</if>
+		</if>
+		<if windows="2">
+			<pixmap name="bg_col">
+				<fill color="#282A33" opacity="100" />
+				<alpha_mask mask="active" />
+			</pixmap>
+			<if type="!active">
+				<pixmap name="bg_color">
+					<fill color="icon_average" opacity="100" />
+					<alpha_mask mask="mask" />
+				</pixmap>
+				<composite bg="bg_color" fg="self" yoffset="-2"/>
+				<composite bg="bg_col" fg="self"/>
+				<composite bg="self" fg="badge" />
+			</if>
+			<if type="active">
+				<pixmap name="bg_color">
+					<fill color="icon_average" opacity="100" />
+					<alpha_mask mask="mask" />
+				</pixmap>
+				<composite bg="bg_color" fg="self" yoffset="-2"/>
+				<composite bg="bg_col" fg="self"/>
+				<composite bg="active" fg="self" />
+				<composite bg="self" fg="badge" />
+			</if>
+		</if>
+		<if windows="3">
+			<pixmap name="bg_col">
+				<fill color="#282A33" opacity="100" />
+				<alpha_mask mask="active" />
+			</pixmap>
+			<if type="!active">
+				<pixmap name="bg_color">
+					<fill color="icon_average" opacity="100" />
+					<alpha_mask mask="mask" />
+				</pixmap>
+				<composite bg="bg_color" fg="self" yoffset="-2"/>
+				<composite bg="bg_col" fg="self"/>
+				<composite bg="self" fg="badge" />
+			</if>
+			<if type="active">
+				<pixmap name="bg_color">
+					<fill color="icon_average" opacity="100" />
+					<alpha_mask mask="mask" />
+				</pixmap>
+				<composite bg="bg_color" fg="self" yoffset="-2"/>
+				<composite bg="bg_col" fg="self"/>
+				<composite bg="active" fg="self" />
+				<composite bg="self" fg="badge" />
+			</if>
+		</if>
+		<if windows="4">
+			<pixmap name="bg_col">
+				<fill color="#282A33" opacity="100" />
+				<alpha_mask mask="active" />
+			</pixmap>
+			<if type="!active">
+				<pixmap name="bg_color">
+					<fill color="icon_average" opacity="100" />
+					<alpha_mask mask="mask" />
+				</pixmap>
+				<composite bg="bg_color" fg="self" yoffset="-2"/>
+				<composite bg="bg_col" fg="self"/>
+				<composite bg="self" fg="badge" />
+			</if>
+			<if type="active">
+				<pixmap name="bg_color">
+					<fill color="icon_average" opacity="100" />
+					<alpha_mask mask="mask" />
+				</pixmap>
+				<composite bg="bg_color" fg="self" yoffset="-2"/>
+				<composite bg="bg_col" fg="self"/>
+				<composite bg="active" fg="self" />
+				<composite bg="self" fg="badge" />
+			</if>
+		</if>
+		<if windows="5:">
+			<pixmap name="bg_col">
+				<fill color="#282A33" opacity="100" />
+				<alpha_mask mask="active" />
+			</pixmap>
+			<if type="!active">
+				<pixmap name="bg_color">
+					<fill color="icon_average" opacity="100" />
+					<alpha_mask mask="mask" />
+				</pixmap>
+				<composite bg="bg_color" fg="self" yoffset="-2"/>
+				<composite bg="bg_col" fg="self"/>
+				<composite bg="self" fg="badge" />
+			</if>
+			<if type="active">
+				<pixmap name="bg_color">
+					<fill color="icon_average" opacity="100" />
+					<alpha_mask mask="mask" />
+				</pixmap>
+				<composite bg="bg_color" fg="self" yoffset="-2"/>
+				<composite bg="bg_col" fg="self"/>
+				<composite bg="active" fg="self" />
+				<composite bg="self" fg="badge" />
+			</if>
+		</if>
+	</if>
+	<!-- rotate the button -->
+	<if orient="left">
+		<rotate angle="90" />
+	</if>
+	<if orient="right">
+		<rotate angle="-90" />
+	</if>
+	<!--
+	<if orient="up">
+		<rotate angle="180"/>
+	</if>-->
+</button_pixmap>
+</theme>
